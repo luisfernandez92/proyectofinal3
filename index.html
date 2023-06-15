@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Raleway:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Playfair Display', serif;
+            font-family: 'Raleway', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: #fff;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .titulo {
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Consulta de Clima</h1>
+    <img src="https://www.pngall.com/wp-content/uploads/11/Weather-PNG-Images.png" alt="" width="150">
+    <div>
+        <label for="ciudad">Ciudad :</label>
+    </div>
+    <div>
+        <input type="text" id="ciudad">
+        <button onclick="consultarClima()">Consultar</button>
+    </div>
+     
+    <div>
+        <label for="ciudades">Ciudades:</label>
+    </div>
+    <div>
+        <input type="text" id="ciudades" value="London, Paris, Berlin">
+        <button onclick="consultarClimas()">Consultar</button>
+    </div>    
+
+    <br><br>
+
+    <div>
+        <button onclick="limpiarTabla()">Limpiar</button>
+   </div>
+    
+   <br><br>
+
+    <div>
+        <table id="tabla-clima">
+            <thead>
+                <tr>
+                    <th>Ciudad</th>
+                    <th>Temperatura</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
